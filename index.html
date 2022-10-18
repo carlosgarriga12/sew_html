@@ -4,65 +4,121 @@
 
 <head>
     <!-- Datos que describen el documento -->
-    <meta charset="UTF-8" >
-    <meta name ="author" content ="Carlos Garriga Suárez" >
-    <meta name ="description" content ="Qué es Node.js">
-    <meta name ="keywords" content ="Node.js, Javascript, HTTP">
-    <meta name ="viewport" content ="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Carlos Garriga Suárez">
+    <meta name="description" content="Qué es Node.js">
+    <meta name="keywords" content="Node.js, Javascript, HTTP">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Node.js ¿Qué es?</title>
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
-    
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css">
+
 </head>
 
 <body>
 
     <!-- Datos con el contenidos que aparece en el navegador -->
-    <h1>Node.js</h1>
-
+    <header>
+        <h1>Node.js</h1>
+    </header>
+    
     <nav>
         <a tabindex="1" accesskey="I" href="index.html">Inicio</a>
         <a tabindex="2" accesskey="A" href="ventajas.html">Ventajas</a>
         <a tabindex="3" accesskey="T" href="versiones.html">Versiones</a>
-        <a tabindex="4" accesskey="C" href="dudas.html">Dudas</a>
+        <a tabindex="4" accesskey="C" href="dudas.html">Dudas</a>      
     </nav>
 
-    <h2>¿Qué es?</h2>
-    <p>Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor (pero no limitándose a ello) basado en el lenguaje de programación JavaScript, asíncrono, con E/S de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google.</p>
-
-    <h2>¿Cuál es su finalidad?</h2>
-    <p>Fue creado con el enfoque de ser útil en la creación de programas de red altamente escalables, como por ejemplo, servidores web.</p>
-
-    <h2>¿Quién creó Node.js?</h2>
-    <p>Fue creado por Ryan Dahl en 2009 y su evolución está apadrinada por la empresa Joyent, que además tiene contratado a Dahl en plantilla.</p>
-
-    <img src="multimedia/node.png" alt="Logo de Node">
-
-    <h2>Algunos aspectos de Node.js</h2>
-
-    <h3>Concurrencia</h3>
-    <p>Node.js funciona con un modelo de evaluación de un único hilo de ejecución, usando entradas y salidas asíncronas las cuales pueden ejecutarse concurrentemente en un número de hasta cientos de miles sin incurrir en costos asociados al cambio de contexto. Este diseño de compartir un único hilo de ejecución entre todas las solicitudes atiende a necesidades de aplicaciones altamente concurrentes, en el que toda operación que realice entradas y salidas debe tener una función callback. Un inconveniente de este enfoque de único hilo de ejecución es que Node.js requiere de módulos adicionales como cluster para escalar la aplicación con el número de núcleos de procesamiento de la máquina en la que se ejecuta.</p>
-
-    <h3>V8</h3> 
-    <p>V8 es el entorno de ejecución para JavaScript creado para Google Chrome. Es software libre desde 2008, está escrito en C++ y compila el código fuente JavaScript en código de máquina en lugar de interpretarlo en tiempo real.
-    Node.js contiene libuv para manejar eventos asíncronos. Libuv es una capa de abstracción de funcionalidades de redes y sistemas de archivo en sistemas Windows y sistemas basados en POSIX como Linux, Mac OS X y Unix.   
-    El cuerpo de operaciones de base de Node.js está escrito en JavaScript con métodos de soporte escritos en C++.</p> 
-
-    <h3>Módulos</h3>
-    <p>Node.js incorpora varios "módulos básicos" compilados en el propio binario, como por ejemplo el módulo de red, que proporciona una capa para programación de red asíncrona y otros módulos fundamentales, como por ejemplo Path, FileSystem, Buffer, Timers y el de propósito más general Stream. Es posible utilizar módulos desarrollados por terceros, ya sea como archivos ".node" precompilados, o como archivos en javascript plano. Los módulos Javascript se implementan siguiendo la especificación CommonJS para módulos, utilizando una variable de exportación para dar a estos scripts acceso a funciones y variables implementadas por los módulos.</p>
-
-    <p>Los módulos de terceros pueden extender node.js o añadir un nivel de abstracción, implementando varias utilidades middleware para utilizar en aplicaciones web, como por ejemplo los frameworks connect y express. Pese a que los módulos pueden instalarse como archivos simples, normalmente se instalan utilizando el Node Package Manager (npm) que nos facilitará la compilación, instalación y actualización de módulos así como la gestión de las dependencias. Además, los módulos que no se instalen en el directorio por defecto de módulos de Node necesitarán la utilización de una ruta relativa para poder encontrarlos.</p>
-
-    <h3>Bucle de eventos</h3>
-    <p>Node.js se registra con el sistema operativo y cada vez que un cliente establece una conexión se ejecuta un callback. Dentro del entorno de ejecución de Node.js, cada conexión recibe una pequeña asignación de espacio de memoria dinámico, sin tener que crear un hilo de ejecución. A diferencia de otros servidores dirigidos por eventos, el bucle de gestión de eventos de Node.js no es llamado explícitamente sino que se activa al final de cada ejecución de una función callback. El bucle de gestión de eventos se termina cuando ya no quedan eventos por atender.</p>
+    <main>
+        <section>
+            <h2>¿Qué es?</h2>
+            <p>Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor
+                (pero
+                no limitándose a ello) basado en el lenguaje de programación JavaScript, asíncrono, con E/S de datos en una
+                arquitectura orientada a eventos y basado en el motor V8 de Google.</p>
     
-    <p>Si quieres saber más acerca de Node.js puedes consultar <a href="https://nodejs.org/es/about/">aquí</a></p>
-
-    <h2>Aquí os dejo un pequeño vídeo sobre Node.js</h2>
+            <h2>¿Cuál es su finalidad?</h2>
+            <p>Fue creado con el enfoque de ser útil en la creación de programas de red altamente escalables, como por
+                ejemplo,
+                servidores web.</p>
     
-    <video width="320" height="240" controls>
-        <source src="multimedia/node.mp4" type="video/mp4">
-      El navegador no soporta el formato de vídeo.
-    </video>
+            <h2>¿Quién creó Node.js?</h2>
+            <p>Fue creado por Ryan Dahl en 2009 y su evolución está apadrinada por la empresa Joyent, que además tiene
+                contratado a Dahl en plantilla.</p>
+    
+            <img src="multimedia/node.png" alt="Logo de Node">
+        </section>
+    
+        <section>
+            <h2>Algunos aspectos de Node.js</h2>
+    
+            <h3>Concurrencia</h3>
+            <p>Node.js funciona con un modelo de evaluación de un único hilo de ejecución, usando entradas y salidas
+                asíncronas
+                las cuales pueden ejecutarse concurrentemente en un número de hasta cientos de miles sin incurrir en costos
+                asociados al cambio de contexto. Este diseño de compartir un único hilo de ejecución entre todas las
+                solicitudes
+                atiende a necesidades de aplicaciones altamente concurrentes, en el que toda operación que realice entradas
+                y
+                salidas debe tener una función callback. Un inconveniente de este enfoque de único hilo de ejecución es que
+                Node.js requiere de módulos adicionales como cluster para escalar la aplicación con el número de núcleos de
+                procesamiento de la máquina en la que se ejecuta.</p>
+    
+            <h3>V8</h3>
+            <p>V8 es el entorno de ejecución para JavaScript creado para Google Chrome. Es software libre desde 2008, está
+                escrito en C++ y compila el código fuente JavaScript en código de máquina en lugar de interpretarlo en
+                tiempo
+                real.
+                Node.js contiene libuv para manejar eventos asíncronos. Libuv es una capa de abstracción de funcionalidades
+                de
+                redes y sistemas de archivo en sistemas Windows y sistemas basados en POSIX como Linux, Mac OS X y Unix.
+                El cuerpo de operaciones de base de Node.js está escrito en JavaScript con métodos de soporte escritos en
+                C++.
+            </p>
+    
+            <h3>Módulos</h3>
+            <p>Node.js incorpora varios "módulos básicos" compilados en el propio binario, como por ejemplo el módulo de
+                red,
+                que proporciona una capa para programación de red asíncrona y otros módulos fundamentales, como por ejemplo
+                Path, FileSystem, Buffer, Timers y el de propósito más general Stream. Es posible utilizar módulos
+                desarrollados
+                por terceros, ya sea como archivos ".node" precompilados, o como archivos en javascript plano. Los módulos
+                Javascript se implementan siguiendo la especificación CommonJS para módulos, utilizando una variable de
+                exportación para dar a estos scripts acceso a funciones y variables implementadas por los módulos.</p>
+    
+            <p>Los módulos de terceros pueden extender node.js o añadir un nivel de abstracción, implementando varias
+                utilidades
+                middleware para utilizar en aplicaciones web, como por ejemplo los frameworks connect y express. Pese a que
+                los
+                módulos pueden instalarse como archivos simples, normalmente se instalan utilizando el Node Package Manager
+                (npm) que nos facilitará la compilación, instalación y actualización de módulos así como la gestión de las
+                dependencias. Además, los módulos que no se instalen en el directorio por defecto de módulos de Node
+                necesitarán
+                la utilización de una ruta relativa para poder encontrarlos.</p>
+    
+            <h3>Bucle de eventos</h3>
+            <p>Node.js se registra con el sistema operativo y cada vez que un cliente establece una conexión se ejecuta un
+                callback. Dentro del entorno de ejecución de Node.js, cada conexión recibe una pequeña asignación de espacio
+                de
+                memoria dinámico, sin tener que crear un hilo de ejecución. A diferencia de otros servidores dirigidos por
+                eventos, el bucle de gestión de eventos de Node.js no es llamado explícitamente sino que se activa al final
+                de
+                cada ejecución de una función callback. El bucle de gestión de eventos se termina cuando ya no quedan
+                eventos
+                por atender.</p>
+    
+            <p>Si quieres saber más acerca de Node.js puedes consultar <a href="https://nodejs.org/es/about/">aquí</a></p>
+    
+            <h2>Aquí os dejo un pequeño vídeo sobre Node.js</h2>
+    
+            <video width="320" height="240" controls>
+                <source src="multimedia/node.mp4" type="video/mp4">
+                El navegador no soporta el formato de vídeo.
+            </video>
+        </section>
+    </main>
 
+    <footer>Carlos Garriga Suárez</footer>
 </body>
+
 </html>

@@ -3,4 +3,69 @@
     Descripción de los estilos
 *****************************/
 
+/*Especificidad (0,0,1)*/
+body {
+    background-color: rgb(179, 239, 199);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+/*Especificidad (0,0,1)*/
+h1 {
+    color: #fff;
+    background-color: rgb(2, 66, 26);
+    text-transform: uppercase;
+}
+
+/*Epecificidad (0,0,1)*/
+h3 {
+    background-color: rgb(0, 94, 9);
+    color: white;
+}
+
+/*Especificidad(0,0,1)*/
+nav {
+    background-color: #333;
+}
+
+/*Especificidad(0,0,1)*/
+footer{
+    background-color: #333;
+    color: #fff;
+}
+
+/*Especificidad(0,0,2)*/
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Especificidad(0,1,2)*/
+nav a:hover{
+    background-color:rgb(0, 83, 32);
+}
+
+/*Especificidad(0,0,1)*/
+table{
+    border: solid thick;
+    border-spacing: 0px;
+    border-color: rgb(0, 94, 9);
+    border-collapse: collapse;
+}
+
+/*Especificidad(0,0,1)*/
+th, td {
+    border: solid medium;
+    border-spacing: 0px;
+    border-color: rgb(0, 94, 9);
+    border-collapse: collapse;
+}
+
+/*Especificidad(0,0,1)*/
+ul {
+    background-color: rgb(84, 192, 124);
+}
+
+/*Especificidad(0,0,1)*/
+ol {
+    background-color: rgb(155, 211, 159);
+}

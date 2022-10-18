@@ -11,96 +11,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Node.js. Formulario de dudas</title>
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css">
 
 </head>
 
 <body>
 
-    <h1>Formulario de dudas acerca de Node.js</h1>
+    <header>
+        <h1>Formulario de dudas acerca de Node.js</h1>
+    </header>
 
     <nav>
         <a tabindex="1" accesskey="I" href="index.html">Inicio</a>
         <a tabindex="2" accesskey="A" href="ventajas.html">Ventajas</a>
         <a tabindex="3" accesskey="T" href="versiones.html">Versiones</a>
-        <a tabindex="4" accesskey="C" href="dudas.html">Dudas</a>
+        <a tabindex="4" accesskey="C" href="dudas.html">Dudas</a>      
     </nav>
 
-    <p>Aquí se encuentra un formulario para preguntar dudas acerca de Node.js</p>
+    <main>
+        <section>
+            <p>Aquí se encuentra un formulario para preguntar dudas acerca de Node.js</p>
 
-    <form>
+            <form>
+                <p><label for="name">Nombre:</label><input type="text" id="name" name="name"></p>
 
-        <p><label for="name">Nombre:</label><input type="text" id="name" name="name"></p>
+                <p><label for="age">Fecha de nacimiento:</label><input type="date" id="age" name="age"></p>
 
-        <p><label for="age">Fecha de nacimiento:</label><input type="date" id="age" name="age"></p>
+                <p><label for="phone">Phone number:</label><input type="tel" id="phone" name="phone" placeholder="123456789">
+                </p>
 
-        <p><label for="phone">Phone number:</label><input type="tel" id="phone" name="phone" placeholder="123456789">
-        </p>
+                <p><label for="mail">Email:</label><input type="email" id="mail" name="mail"></p>
 
-        <p><label for="mail">Email:</label><input type="email" id="mail" name="mail"></p>
-
-        <fieldset>
-            <legend>¿Tiene usted experiencia trabajando con Node.js?</legend>
-            <input type="radio" id="yes" name="experience" value="Sí">
-            <label for="yes">Sí</label>
-            <input type="radio" id="no" name="experience" value="No">
-            <label for="no">No</label><br>
-        </fieldset>
+                <fieldset>
+                    <legend>¿Tiene usted experiencia trabajando con Node.js?</legend>
+                    <input type="radio" id="yes" name="experience" value="Sí">
+                    <label for="yes">Sí</label>
+                    <input type="radio" id="no" name="experience" value="No">
+                    <label for="no">No</label><br>
+                </fieldset>
 
 
-        <label for="role">¿Cuál es tu ocupación actual?</label><br>
-        <select name="role" id="role">
-            <option value="estudiante">Estudiante</option>
-            <option value="empleado">Universitario</option>
-            <option value="otro">Otro</option>
-        </select><br>
+                <label for="role">¿Cuál es tu ocupación actual?</label><br>
+                <select name="role" id="role">
+                    <option value="estudiante">Estudiante</option>
+                    <option value="empleado">Universitario</option>
+                    <option value="otro">Otro</option>
+                </select><br>
 
-        <label for="comentario">Escriba aquí su duda</label><br>
-        <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br>
+                <label for="comentario">Escriba aquí su duda</label><br>
+                <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br>
 
-        <input type="submit" value="Enviar"><br>
-    </form>
+                <input type="submit" value="Enviar"><br>
+            </form>
 
-    <p>Da igual si eres principiante, intermedio o experto en Node aquí podrás deajar cualquier tipo de duda en lo que
-        se refiere
-        a código, instalación de paquetes, dependencias o cualquier cosa.
-    </p>
+            <p>Da igual si eres principiante, intermedio o experto en Node aquí podrás deajar cualquier tipo de duda en lo que
+                se refiere
+                a código, instalación de paquetes, dependencias o cualquier cosa.
+            </p>
+        </section>
+        <section>
+            <h2>¿Conoces Express?</h2>
+        
+            <img src="multimedia/express.png" alt="Logo de Express">
 
-    <h2>¿Conoces Express?</h2>
-    
-    <img src="multimedia/express.png" alt="Logo de Express">
-
-    <ul>
-        <li>Es un framework de desarrollo de aplicaciones web
-            minimalista y flexible para Node.js.
-        </li>
-        <li>
-            Proporciona mecanismos para:
             <ul>
-                <li>
-                    Direccionamiento de URL (Routing) manejo de
-                    solicitudes HTTP con soporte a sus distintos metodos
-                    (Get, Post, Put, Delete, etc.)
+                <li>Es un framework de desarrollo de aplicaciones web
+                    minimalista y flexible para Node.js.
                 </li>
                 <li>
-                    Permite trabajar con distintos motores de plantillas
-                    (Jade, swig, EJS, JinJS …)
-                </li>
-                <li>
-                    Establecer la configuración común de la aplicación web,
-                    como el puerto que se utilizará para la conexión, y la
-                    ubicación de las plantillas, etc.
+                    Proporciona mecanismos para:
+                    <ul>
+                        <li>
+                            Direccionamiento de URL (Routing) manejo de
+                            solicitudes HTTP con soporte a sus distintos metodos
+                            (Get, Post, Put, Delete, etc.)
+                        </li>
+                        <li>
+                            Permite trabajar con distintos motores de plantillas
+                            (Jade, swig, EJS, JinJS …)
+                        </li>
+                        <li>
+                            Establecer la configuración común de la aplicación web,
+                            como el puerto que se utilizará para la conexión, y la
+                            ubicación de las plantillas, etc.
+                        </li>
+                    </ul>
                 </li>
             </ul>
-        </li>
-    </ul>
 
-    <p>Aqui os dejo un pequeño audio explicativo de Express</p>
+            <p>Aqui os dejo un pequeño audio explicativo de Express</p>
 
-    <audio controls>
-        <source src="multimedia/express.mp3" type="audio/mp3">
-        El navegador no soporta el tipo de audio.
-    </audio>
-
+            <audio controls>
+                <source src="multimedia/express.mp3" type="audio/mp3">
+                El navegador no soporta el tipo de audio.
+            </audio>
+        </section>
+    </main>
+    <footer>Carlos Garriga Suárez</footer>
 </body>
 
 </html>

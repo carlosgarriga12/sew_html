@@ -1,0 +1,39 @@
+/*****************************
+    Carlos Garriga Suárez - UO276903
+    Descripción de los estilos
+*****************************/
+
+/*Especificidad (0, 0, 1)*/
+header {
+    background-color: rgb(170, 228, 155);
+}
+
+/*Especificidad (0, 0, 1)*/
+main {
+    background-color: rgb(244, 241, 52);
+}
+
+/*Especificidad (0, 0, 1)*/
+section {
+    background-color: rgb(149, 230, 234);
+}
+
+/*Especificidad (0, 0, 1)*/
+footer {
+    background-color: black;
+}
+
+ul {
+    display: grid;
+}
+
+nav {
+    margin: 0%;
+    padding: auto;
+}
+
+
+
+
+
+

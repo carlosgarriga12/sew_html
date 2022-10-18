@@ -1,0 +1,16 @@
+/*****************************
+    Carlos Garriga Suárez - UO276903
+    Descripción de los estilos 
+    para el posicionamiento
+    de los elementos y contenido
+*****************************/
+
+/*Especificidad (0,0,1)*/
+h1 {
+    text-align: center;
+}
+
+/*Especificidad (0,0,1)*/
+h3{
+    text-align: center;
+}
