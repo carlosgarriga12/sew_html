@@ -5,12 +5,30 @@
     de los elementos y contenido
 *****************************/
 
+
 /*Especificidad (0,0,1)*/
-h1 {
+header, footer {
+    padding: 0.5em;
     text-align: center;
+    display: grid;
+}
+
+/*Especificidad (0,0,1)*/
+main {
+    display: grid;
+}
+
+/*Especificidad (0,0,1)*/
+section {
+    display: grid;
 }
 
 /*Especificidad (0,0,1)*/
 h3{
+    text-align: center;
+}
+
+/*Especificidad (0,0,1)*/
+nav {
     text-align: center;
 }

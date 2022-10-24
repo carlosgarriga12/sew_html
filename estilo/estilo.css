@@ -30,12 +30,14 @@ nav {
 /*Especificidad(0,0,1)*/
 footer{
     background-color: #333;
+    font-size: large;
     color: #fff;
 }
 
 /*Especificidad(0,0,2)*/
 nav a {
     text-decoration: none;
+    font-size: large;
     color: white;
 }
 
